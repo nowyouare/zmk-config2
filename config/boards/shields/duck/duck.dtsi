@@ -1,0 +1,19 @@
+/* Copyright (c) 2020 The ZMK Contributors
+ * SPDX-License-Identitfier: MIT
+ *
+ * Author: Jack Hartstein
+ * Last Edited: Dec 20 2020
+ */
+
+enc_encoder: encoder_enc {
+        compatible = "alps,ec11";
+        label = "ENC_ENCODER";
+        a-gpios = <F6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <F5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        resolution = <4>;
+    };
+
+sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&enc_encoder>;
+    };

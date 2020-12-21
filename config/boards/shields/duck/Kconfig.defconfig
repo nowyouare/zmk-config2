@@ -1,0 +1,12 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+#
+# Author: Jack Hartstein
+# Last Edited: December 20 2020
+
+if SHIELD_DUCK
+
+config ZMK_KEYBOARD_NAME
+	default "duck"
+
+endif

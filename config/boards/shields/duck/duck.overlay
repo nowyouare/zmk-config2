@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ * SPDX-License-Identifier: MIT
+ *
+ * Author: Jack Hartstein
+ * Last Edited: Dec 20 2020
+ */
+
+/ {
+	&enc_encoder {
+		status = "okay";
+	};
+
+	chosen {
+		zmk,kscan = &kscan0;
+	};
+
+	kscan0: kscan_0 {
+		compatible = "zmk,kscan-gpio-matrix";
+		label = "KSCAN";
+		diode_direction = "col2row";
+
+	row-gpios
+    		= <&pro_micro_c 6 GPIO_ACTIVE_HIGH>
+                , <&pro_micro_d 7 GPIO_ACTIVE_HIGH>
+                , <&pro_micro_e 6 GPIO_ACTIVE_HIGH>
+                , <&pro_micro_b 4 GPIO_ACTIVE_HIGH>
+                , <&pro_micro_b 5 GPIO_ACTIVE_HIGH>
+                ;
+
+	col-gpios
+		= <&pro_micro_f 7 GPIO_ACTIVE_HIGH>
+		, <&pro_micro_b 1 GPIO_ACTIVE_HIGH>
+		, <&pro_micro_b 3 GPIO_ACTIVE_HIGH>
+		, <&pro_micro_b 2 GPIO_ACTIVE_HIGH>
+		, <&pro_micro_b 6 GPIO_ACTIVE_HIGH>
+		;
+	};
+};
