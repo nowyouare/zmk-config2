@@ -46,4 +46,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: tidbit_left_nice_nano.uf2
+          path: tidbit_nice_nano.uf2
